@@ -86,3 +86,8 @@ C:\Users\diego\OneDrive\Escritorio\App\Back-End\obj\Debug\net6.0\Back-End.pdb
 C:\Users\diego\OneDrive\Escritorio\App\Back-End\obj\Debug\net6.0\Back-End.genruntimeconfig.cache
 C:\Users\diego\OneDrive\Escritorio\App\Back-End\obj\Debug\net6.0\ref\Back-End.dll
 C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\MailKit.dll
+C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\Microsoft.Office.Interop.Outlook.dll
+C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\MimeKit.dll
+C:\Users\diego\OneDrive\Escritorio\App\Back-End\bin\Debug\net6.0\BouncyCastle.Crypto.dll

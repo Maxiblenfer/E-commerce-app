@@ -20,6 +20,17 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { ProgressBarComponent } from './components/shared/progress-bar/progress-bar.component';
 import { ProgressBarModule } from 'primeng/progressbar';
 import { RegisterComponent } from './components/welcome/register/register.component';
+import { FieldsetModule } from 'primeng/fieldset';
+import { DropdownModule } from 'primeng/dropdown';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { ToastModule } from 'primeng/toast';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AddTokenInterceptor } from './helpers/add-token.interceptor';
+import { ActivateComponent } from './components/welcome/activate/activate.component';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { ConfirmPopupModule } from 'primeng/confirmpopup';
+import { ConfirmationService, MessageService } from 'primeng/api';
+import { ConfirmdioalogComponent } from './components/shared/confirmdioalog/confirmdioalog.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +39,9 @@ import { RegisterComponent } from './components/welcome/register/register.compon
     LoadingspinnerComponent,
     ProgressBarComponent,
     RegisterComponent,
+    DashboardComponent,
+    ActivateComponent,
+    ConfirmdioalogComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +59,17 @@ import { RegisterComponent } from './components/welcome/register/register.compon
     PasswordModule,
     BrowserAnimationsModule,
     NgxSpinnerModule,
-    ReactiveFormsModule,ProgressBarModule
+    ReactiveFormsModule,
+    ProgressBarModule,
+    FieldsetModule,
+    DropdownModule,
+    HttpClientModule,
+    ToastModule,ConfirmDialogModule,ConfirmPopupModule,
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AddTokenInterceptor, multi: true },
+    ConfirmationService,MessageService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

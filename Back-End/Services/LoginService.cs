@@ -17,6 +17,8 @@ namespace Back_End.Services
         {
             return await aplicationDbContext.Users.Where(x=>x.email.Equals(email)).FirstOrDefaultAsync();
         }
-     
+
+       
+
     }
 }

@@ -3,11 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { LoginComponent } from './components/welcome/login/login.component';
 import { RegisterComponent } from './components/welcome/register/register.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ActivateComponent } from './components/welcome/activate/activate.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/welcome',
+    redirectTo: '/welcome/login',
     pathMatch: 'full',
   },
   {
@@ -25,10 +27,17 @@ const routes: Routes = [
         component: LoginComponent,
       },
       {
+        path: 'activate/:url',
+        component: ActivateComponent,
+      },
+      {
         path: 'register',
         component: RegisterComponent,
       },
-
+      {
+        path: 'dashboard',
+        component: DashboardComponent,
+      },
       {
         path: '**',
         redirectTo: 'login',
@@ -37,10 +46,10 @@ const routes: Routes = [
     ],
   },
   {
-    path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full',
+    path: 'dashboard',
+    component: DashboardComponent,
   },
+
   {
     path: '**',
     redirectTo: '/welcome/login',
